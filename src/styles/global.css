@@ -1,0 +1,197 @@
+:root {
+  --primary-color: #2196f3;
+  --secondary-color: #f50057;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --text-secondary: #666;
+  --border-radius: 16px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Стили для скроллбара */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1976d2;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Стили для кнопок */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Стили для ссылок */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1976d2;
+}
+
+/* Стили для форм */
+input, textarea {
+  font-family: inherit;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Стили для карточек */
+.card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для градиентов */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #64b5f6 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #ff4081 100%);
+}
+
+/* Стили для иконок */
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Стили для параграфов */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Стили для списков */
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+/* Стили для изображений */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+/* Стили для контейнеров */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Стили для сетки */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Стили для флекс-контейнеров */
+.flex {
+  display: flex;
+  gap: 20px;
+}
+
+/* Стили для отступов */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* Стили для выравнивания */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Стили для цветов текста */
+.text-primary { color: var(--primary-color); }
+.text-secondary { color: var(--secondary-color); }
+.text-muted { color: var(--text-secondary); } 
